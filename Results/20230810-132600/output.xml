@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230810 13:26:00.709" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="D:\Stage\amazon\tests\test.robot">
+<kw name="ouvrir navigateur" library="Commmon" type="SETUP">
+<doc>Ce keyword sert a ouvrir le navigateur</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>open browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:00.875" endtime="20230810 13:26:00.883"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230810 13:26:00.883" endtime="20230810 13:26:00.883"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230810 13:26:00.884" endtime="20230810 13:26:00.884"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ExecutionSettings.url}</arg>
+<arg>${ExecutionSettings.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230810 13:26:00.885" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230810 13:26:00.884" endtime="20230810 13:26:11.116"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>browser ouvret</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:11.116" endtime="20230810 13:26:11.124"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${ExecutionSettings.url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:11.124" endtime="20230810 13:26:11.125"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230810 13:26:11.125" endtime="20230810 13:26:11.574"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>brower maximisé</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:11.574" endtime="20230810 13:26:11.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:14.576" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:11.575" endtime="20230810 13:26:14.576"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>© 2005 - 2023 OrangeHRM, Inc. All rights reserved.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230810 13:26:14.998" level="INFO">Current page contains text '© 2005 - 2023 OrangeHRM, Inc. All rights reserved.'.</msg>
+<status status="PASS" starttime="20230810 13:26:14.576" endtime="20230810 13:26:14.998"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:00.875" endtime="20230810 13:26:14.998"/>
+</kw>
+<test id="s1-t1" name="modifier un client1" line="14">
+<kw name="se loguer" library="Commmon" type="SETUP">
+<doc>Ce keyword sert a se loguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se loguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:15.023" endtime="20230810 13:26:15.039"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:18.040" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:15.039" endtime="20230810 13:26:18.040"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230810 13:26:18.459" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20230810 13:26:18.040" endtime="20230810 13:26:18.459"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:18.459" endtime="20230810 13:26:18.685"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.locator}</arg>
+<arg>${LoginDataInput.Users.user1.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:18.686" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230810 13:26:18.685" endtime="20230810 13:26:19.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>username insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:19.423" endtime="20230810 13:26:19.424"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LoginLocator.Password.locator}</arg>
+<arg>${LoginDataInput.Users.user1.password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:19.425" level="INFO">Typing password into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<msg timestamp="20230810 13:26:19.866" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230810 13:26:20.156" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230810 13:26:19.424" endtime="20230810 13:26:20.156"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:20.156" endtime="20230810 13:26:20.157"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LoginLocator.btn_Login.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:20.157" level="INFO">Clicking button '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20230810 13:26:20.157" endtime="20230810 13:26:21.239"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>bouton login cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:21.239" endtime="20230810 13:26:21.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:24.241" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:21.240" endtime="20230810 13:26:24.241"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:15.023" endtime="20230810 13:26:24.241"/>
+</kw>
+<kw name="chercher un utilisateur" library="userMangement">
+<arg>utilisateur1</arg>
+<kw name="aller au link" library="Commmon">
+<arg>Admin</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${link_menu}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:24.241" endtime="20230810 13:26:24.464"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on va cliquer sur le lien : ${link_menu}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:24.464" endtime="20230810 13:26:24.465"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:24.466" level="INFO">Clicking element '//html[1]/body[1]/div[1]/div[1]/div[1]/aside[1]/nav[1]/div[2]/ul[1]/li[1]/a[1]/span[1]'.</msg>
+<status status="PASS" starttime="20230810 13:26:24.465" endtime="20230810 13:26:25.665"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien :${link_menu} est cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:25.665" endtime="20230810 13:26:25.665"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:25.665" endtime="20230810 13:26:26.281"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:29.281" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:26.281" endtime="20230810 13:26:29.281"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:24.241" endtime="20230810 13:26:29.281"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on insere le nom de l'utilisateur a cherche</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:29.281" endtime="20230810 13:26:29.282"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.Username.locator}</arg>
+<arg>${Utilisateur.users.${souris}.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:29.283" level="INFO">Typing text 'Admin' into text field '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]'.</msg>
+<status status="PASS" starttime="20230810 13:26:29.282" endtime="20230810 13:26:30.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:33.116" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:30.116" endtime="20230810 13:26:33.116"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.btn_Search.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:33.117" level="INFO">Clicking button '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230810 13:26:33.116" endtime="20230810 13:26:34.250"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:37.253" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:34.250" endtime="20230810 13:26:37.253"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:24.241" endtime="20230810 13:26:37.253"/>
+</kw>
+<kw name="se deloguer" library="Commmon" type="TEARDOWN">
+<doc>Ce keyword est pour se deloguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se deloguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:37.254" endtime="20230810 13:26:37.256"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:40.257" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:37.256" endtime="20230810 13:26:40.257"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:40.258" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span'.</msg>
+<status status="PASS" starttime="20230810 13:26:40.257" endtime="20230810 13:26:40.720"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:40.721" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20230810 13:26:40.720" endtime="20230810 13:26:41.802"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:44.803" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:41.802" endtime="20230810 13:26:44.803"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:37.254" endtime="20230810 13:26:44.803"/>
+</kw>
+<tag>jira-125</tag>
+<status status="PASS" starttime="20230810 13:26:14.998" endtime="20230810 13:26:44.804"/>
+</test>
+<test id="s1-t2" name="modifier un client2" line="17">
+<kw name="se loguer" library="Commmon" type="SETUP">
+<doc>Ce keyword sert a se loguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se loguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:44.807" endtime="20230810 13:26:44.808"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:47.808" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:44.808" endtime="20230810 13:26:47.808"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230810 13:26:48.232" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20230810 13:26:47.809" endtime="20230810 13:26:48.232"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:48.232" endtime="20230810 13:26:48.450"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.locator}</arg>
+<arg>${LoginDataInput.Users.user1.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:48.452" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230810 13:26:48.450" endtime="20230810 13:26:49.165"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>username insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:49.165" endtime="20230810 13:26:49.165"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LoginLocator.Password.locator}</arg>
+<arg>${LoginDataInput.Users.user1.password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:49.167" level="INFO">Typing password into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<msg timestamp="20230810 13:26:49.608" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230810 13:26:49.841" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230810 13:26:49.165" endtime="20230810 13:26:49.841"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:49.841" endtime="20230810 13:26:49.842"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LoginLocator.btn_Login.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:49.843" level="INFO">Clicking button '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20230810 13:26:49.842" endtime="20230810 13:26:50.912"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>bouton login cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:50.912" endtime="20230810 13:26:50.912"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:53.914" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:50.913" endtime="20230810 13:26:53.914"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:44.807" endtime="20230810 13:26:53.914"/>
+</kw>
+<kw name="chercher un utilisateur" library="userMangement">
+<arg>utilisateur2</arg>
+<kw name="aller au link" library="Commmon">
+<arg>Admin</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${link_menu}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:53.915" endtime="20230810 13:26:54.135"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on va cliquer sur le lien : ${link_menu}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:54.135" endtime="20230810 13:26:54.136"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:54.137" level="INFO">Clicking element '//html[1]/body[1]/div[1]/div[1]/div[1]/aside[1]/nav[1]/div[2]/ul[1]/li[1]/a[1]/span[1]'.</msg>
+<status status="PASS" starttime="20230810 13:26:54.136" endtime="20230810 13:26:55.487"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien :${link_menu} est cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:55.488" endtime="20230810 13:26:55.493"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:26:55.493" endtime="20230810 13:26:56.119"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:26:59.135" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:56.119" endtime="20230810 13:26:59.135"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:53.915" endtime="20230810 13:26:59.135"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on insere le nom de l'utilisateur a cherche</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:26:59.135" endtime="20230810 13:26:59.136"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.Username.locator}</arg>
+<arg>${Utilisateur.users.${souris}.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:26:59.137" level="INFO">Typing text 'Anthony.Nolan' into text field '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]'.</msg>
+<status status="PASS" starttime="20230810 13:26:59.136" endtime="20230810 13:26:59.838"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:02.840" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:26:59.838" endtime="20230810 13:27:02.840"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.btn_Search.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:02.841" level="INFO">Clicking button '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230810 13:27:02.840" endtime="20230810 13:27:03.969"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:06.969" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:03.969" endtime="20230810 13:27:06.969"/>
+</kw>
+<status status="PASS" starttime="20230810 13:26:53.914" endtime="20230810 13:27:06.969"/>
+</kw>
+<kw name="se deloguer" library="Commmon" type="TEARDOWN">
+<doc>Ce keyword est pour se deloguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se deloguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:06.971" endtime="20230810 13:27:06.971"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:09.973" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:06.971" endtime="20230810 13:27:09.973"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:09.974" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span'.</msg>
+<status status="PASS" starttime="20230810 13:27:09.973" endtime="20230810 13:27:10.422"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:10.424" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20230810 13:27:10.422" endtime="20230810 13:27:11.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:14.482" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:11.481" endtime="20230810 13:27:14.482"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:06.970" endtime="20230810 13:27:14.482"/>
+</kw>
+<tag>jira-126</tag>
+<status status="PASS" starttime="20230810 13:26:44.806" endtime="20230810 13:27:14.483"/>
+</test>
+<test id="s1-t3" name="modifier un client3" line="20">
+<kw name="se loguer" library="Commmon" type="SETUP">
+<doc>Ce keyword sert a se loguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se loguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:14.486" endtime="20230810 13:27:14.486"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:17.488" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:14.486" endtime="20230810 13:27:17.488"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230810 13:27:17.906" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20230810 13:27:17.488" endtime="20230810 13:27:17.906"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:27:17.906" endtime="20230810 13:27:18.123"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LoginLocator.Username.locator}</arg>
+<arg>${LoginDataInput.Users.user1.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:18.125" level="INFO">Typing text 'Admin' into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20230810 13:27:18.123" endtime="20230810 13:27:18.812"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>username insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:18.812" endtime="20230810 13:27:18.813"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LoginLocator.Password.locator}</arg>
+<arg>${LoginDataInput.Users.user1.password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:18.814" level="INFO">Typing password into text field '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input'.</msg>
+<msg timestamp="20230810 13:27:19.255" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230810 13:27:19.504" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230810 13:27:18.813" endtime="20230810 13:27:19.504"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password insere</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:19.505" endtime="20230810 13:27:19.506"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LoginLocator.btn_Login.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:19.508" level="INFO">Clicking button '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20230810 13:27:19.506" endtime="20230810 13:27:20.629"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>bouton login cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:20.629" endtime="20230810 13:27:20.629"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:23.631" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:20.629" endtime="20230810 13:27:23.631"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:14.485" endtime="20230810 13:27:23.631"/>
+</kw>
+<kw name="chercher un utilisateur" library="userMangement">
+<arg>utilisateur3</arg>
+<kw name="aller au link" library="Commmon">
+<arg>Admin</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${link_menu}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:27:23.634" endtime="20230810 13:27:23.858"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on va cliquer sur le lien : ${link_menu}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:23.858" endtime="20230810 13:27:23.859"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:23.860" level="INFO">Clicking element '//html[1]/body[1]/div[1]/div[1]/div[1]/aside[1]/nav[1]/div[2]/ul[1]/li[1]/a[1]/span[1]'.</msg>
+<status status="PASS" starttime="20230810 13:27:23.859" endtime="20230810 13:27:25.223"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien :${link_menu} est cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:25.223" endtime="20230810 13:27:25.224"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${MenuPageAcceuil.${link_menu}.description}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230810 13:27:25.224" endtime="20230810 13:27:25.614"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:28.616" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:25.614" endtime="20230810 13:27:28.616"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:23.634" endtime="20230810 13:27:28.616"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on insere le nom de l'utilisateur a cherche</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:28.616" endtime="20230810 13:27:28.617"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.Username.locator}</arg>
+<arg>${Utilisateur.users.${souris}.Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:28.619" level="INFO">Typing text 'bobdr' into text field '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]'.</msg>
+<status status="PASS" starttime="20230810 13:27:28.617" endtime="20230810 13:27:29.359"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:32.361" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:29.359" endtime="20230810 13:27:32.361"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Admin.SystemsUsers.btn_Search.locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:32.362" level="INFO">Clicking button '//html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20230810 13:27:32.361" endtime="20230810 13:27:33.487"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:36.489" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:33.487" endtime="20230810 13:27:36.489"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:23.633" endtime="20230810 13:27:36.489"/>
+</kw>
+<kw name="se deloguer" library="Commmon" type="TEARDOWN">
+<doc>Ce keyword est pour se deloguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>se deloguer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:36.490" endtime="20230810 13:27:36.490"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:39.505" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:36.490" endtime="20230810 13:27:39.505"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:39.505" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/span'.</msg>
+<status status="PASS" starttime="20230810 13:27:39.505" endtime="20230810 13:27:39.993"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230810 13:27:39.994" level="INFO">Clicking element '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20230810 13:27:39.993" endtime="20230810 13:27:41.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${ExecutionSettings.Time_Stay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230810 13:27:44.181" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230810 13:27:41.180" endtime="20230810 13:27:44.181"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:36.489" endtime="20230810 13:27:44.181"/>
+</kw>
+<tag>jira-127</tag>
+<status status="PASS" starttime="20230810 13:27:14.484" endtime="20230810 13:27:44.182"/>
+</test>
+<kw name="fermer navigateur" library="Commmon" type="TEARDOWN">
+<doc>Ce keyword sert a se loguer</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>femer le navigateur</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230810 13:27:44.185" endtime="20230810 13:27:44.185"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230810 13:27:44.186" endtime="20230810 13:27:46.479"/>
+</kw>
+<status status="PASS" starttime="20230810 13:27:44.185" endtime="20230810 13:27:46.479"/>
+</kw>
+<doc>mon premier test</doc>
+<status status="PASS" starttime="20230810 13:26:00.710" endtime="20230810 13:27:46.479"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">jira-125</stat>
+<stat pass="1" fail="0" skip="0">jira-126</stat>
+<stat pass="1" fail="0" skip="0">jira-127</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

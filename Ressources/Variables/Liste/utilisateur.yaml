@@ -1,0 +1,17 @@
+Utilisateur:
+    users:
+        utilisateur1:
+            Username: Admin
+            User Role: Admin
+            Employee Name: Tewst Test
+            Status: Enabled
+        utilisateur2:
+            Username: Anthony.Nolan
+            User Role: ESS
+            Employee Name: Anthony Nolan
+            Status: Enabled
+        utilisateur3:
+            Username: bobdr
+            User Role: ESS
+            Employee Name: Bob Dr
+            Status: Enabled

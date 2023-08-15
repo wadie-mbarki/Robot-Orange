@@ -1,0 +1,5 @@
+ExecutionSettings:
+  url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  browser: chrome
+  Timeout: 10
+  Time_Stay: 3

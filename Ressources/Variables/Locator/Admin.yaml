@@ -1,0 +1,9 @@
+#Systems users : chercher un utilisteur
+Admin:
+  SystemsUsers:
+    Username:
+      description: Username
+      locator: //html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]
+    btn_Search:
+      description: Search
+      locator: //html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/button[2]

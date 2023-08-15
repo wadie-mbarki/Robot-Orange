@@ -1,0 +1,10 @@
+LoginLocator:
+  Username:
+    description: Username
+    locator: //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input
+  Password:
+    description: Password
+    locator: //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input
+  btn_Login:
+    description: Login
+    locator: //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button

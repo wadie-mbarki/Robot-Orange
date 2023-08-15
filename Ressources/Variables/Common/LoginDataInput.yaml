@@ -1,0 +1,5 @@
+LoginDataInput:
+  Users:
+    user1:
+      username: Admin
+      password: admin123
